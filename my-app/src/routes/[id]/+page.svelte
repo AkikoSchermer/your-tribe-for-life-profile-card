@@ -4,6 +4,8 @@
     const { member } = data;
   </script>
 
+<main>
+
 <section>
 
     <div class="lines">
@@ -24,6 +26,8 @@
 
 </section>
 
+</main>
+
 <style>
 
     /* kleurtjes */
@@ -31,17 +35,25 @@
     /* lightgrey */
     /* white */
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}    
+
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     height: 600px;
     width: 300px;
     margin: 0 auto;
     border: 2px solid black;
     border-radius: 20px;
     background-color: beige;
+    overflow: hidden;
 }    
 
 .lines {
@@ -49,7 +61,7 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 60px;
 }  
 
@@ -64,7 +76,14 @@ section {
     align-items: center; */
     object-fit: cover;
     /* margin: 0 auto; */
+    width: 100%;     
     height: 300px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.profile-img:hover {
+  transform: scale(1.2);
+
 }
 
 .text-block {
