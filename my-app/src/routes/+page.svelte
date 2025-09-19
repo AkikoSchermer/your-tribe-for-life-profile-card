@@ -1,14 +1,13 @@
 <script>
-  let { data } = $props();
 
-  const members = data.members.data;
-  const member = members.find((m) => m.id === 25);
+//   let { data } = $props();
+export let data;
+  const person = data.person;
+
 </script>
 
-{#if member}
-  <a href="/{member.id}">
-    <p>{member.name}</p>
-  </a>
+{#if person}
+    <p>{person.name}</p>
 {:else}
   <p>Lid niet gevonden</p>
 {/if}

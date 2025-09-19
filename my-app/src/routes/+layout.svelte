@@ -8,11 +8,11 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<header>
+<!-- <header>
   <nav>
     <a href="/">Home</a>
   </nav>
-</header>
+</header> -->
 
 <main class="home">
   <slot />
