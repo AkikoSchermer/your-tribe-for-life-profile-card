@@ -1,22 +1,14 @@
 <script>
+  let { data } = $props();
 
-let { data } = $props();
-
-const members = data.members.data;
-
+  const members = data.members.data;
+  const member = members.find((m) => m.id === 25);
 </script>
 
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
-
-<ul>
-{#each members as member}
-<li>
-<a href="/{member.id}">
-    {member.name} - {member.bio} 
-    <img src="{member.avatar}" alt="Avatar van {member.name}" />
-</a><br>
-</li>
-{/each}
-</ul> 
+{#if member}
+  <a href="/{member.id}">
+    <p>{member.name}</p>
+  </a>
+{:else}
+  <p>Lid niet gevonden</p>
+{/if}

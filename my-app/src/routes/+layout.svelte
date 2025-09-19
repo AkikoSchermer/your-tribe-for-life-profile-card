@@ -1,11 +1,25 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
+  import favicon from "$lib/assets/favicon.svg";
 
-	let { children } = $props();
+  export let data;
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<header>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+</header>
+
+<main class="home">
+  <slot />
+</main>
+
+<style>
+  .home {
+    background-color: pink;
+  }
+</style>
