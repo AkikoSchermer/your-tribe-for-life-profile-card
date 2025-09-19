@@ -32,6 +32,7 @@
   --line-color: white ;
   --text-block-bg-color: white;
   --text-box-border-color: white ;
+  --text-border-font-color: black;
 }
     /* kleurtjes */
     /* brown */
@@ -47,17 +48,20 @@ main {
 }    
 
 section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    height: 600px;
+    /* height: 550px; */
+    height: 500px;
     width: 300px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border: 2px solid var(--card-border-color);
     border-radius: 20px;
     background-color: var(--card-bg-color);
     box-shadow: #DAC4AC;
+    overflow: hidden;
 }    
 
 .lines {
@@ -72,23 +76,42 @@ section {
 .line {
     width: 80px;
     border: 1px solid var(--line-color);
+    transition: transform 0.3s ease-in-out;
 }
 
-.profile-img {
+.line:hover {
+  transform: scale(1.1);
+
+}
+
+section .profile-img {
     object-fit: cover;
-    height: 300px;
+    width: 100%;
+    /* height: 300px; */
+    /* height: 100%; */
+    transition: transform 0.3s ease-in-out;
+}
+
+section .profile-img:hover {
+    transform: scale(1.2);
 }
 
 .text-block {
     font-size: 1.2em;
     font-weight: 300;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 200px;
     height: fit-content;
     border-radius: 20px;
     border: 2px solid var(--text-box-border-color);
     background-color: var(--text-block-bg-color);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text-block:hover {
+    color: var(--text-border-font-color);
+    transform: scale(1.1);
 }
 
 </style>
