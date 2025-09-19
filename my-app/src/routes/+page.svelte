@@ -26,17 +26,24 @@
 
 <style>
 
+:root {
+  --card-bg-color: #DAC4AC ;
+  --card-border-color: white ;
+  --line-color: white ;
+  --text-block-bg-color: white;
+  --text-box-border-color: white ;
+}
     /* kleurtjes */
     /* brown */
     /* lightgrey */
     /* white */
-
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh; 
+    font-family: 'Montserrat', sans-serif;
 }    
 
 section {
@@ -47,9 +54,10 @@ section {
     height: 600px;
     width: 300px;
     margin: 0 auto;
-    border: 2px solid black;
+    border: 2px solid var(--card-border-color);
     border-radius: 20px;
-    background-color: beige;
+    background-color: var(--card-bg-color);
+    box-shadow: #DAC4AC;
 }    
 
 .lines {
@@ -63,7 +71,7 @@ section {
 
 .line {
     width: 80px;
-    border: 2px solid black;
+    border: 1px solid var(--line-color);
 }
 
 .profile-img {
@@ -72,12 +80,14 @@ section {
 }
 
 .text-block {
+    font-size: 1.2em;
+    font-weight: 300;
     margin-top: 100px;
     width: 200px;
-    height: 30px;
+    height: fit-content;
     border-radius: 20px;
-    border: 2px solid black;
-    background-color: lightgrey;
+    border: 2px solid var(--text-box-border-color);
+    background-color: var(--text-block-bg-color);
     text-align: center;
 }
 
