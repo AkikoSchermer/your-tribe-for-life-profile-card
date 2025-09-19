@@ -8,18 +8,10 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<!-- <header>
-  <nav>
-    <a href="/">Home</a>
-  </nav>
-</header> -->
-
-<main class="home">
+<main class="homepage">
   <slot />
 </main>
 
 <style>
-  .home {
-    background-color: pink;
-  }
+
 </style>
